@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mahsulolar</title>
+</head>
+<body>
+<h1>Mahsulotlar royxati</h1>
+{% if products %}
+{% for product in products%}
+<h3><a href="{% url 'detail' product.id %}"></a> {{product.name}}</h3>
+{% endfor %}
+{% else %}
+<h3>Bazada malumot yoq </h3>
+{%endif %}
+</body>
+</html>
